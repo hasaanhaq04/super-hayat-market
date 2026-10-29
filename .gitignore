@@ -1,0 +1,24 @@
+# Store books, attachments, and backups are always private.
+/data/
+*.db
+*.db-*
+*.sqlite*
+*.log
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.webp
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.paddle*/
+.cursor/
+.codex/
+.agents/
+.DS_Store
+Thumbs.db

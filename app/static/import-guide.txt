@@ -1,0 +1,19 @@
+Prepare these invoice pictures for Super Hayat Market. Return a downloadable JSON file only, using exactly this structure:
+{
+  "invoices": [
+    {
+      "supplier": "Vendor name",
+      "invoice_number": "INV-123",
+      "invoice_date": "2026-10-28",
+      "due_date": "2026-11-11",
+      "total": "68.00",
+      "amount_paid": "0.00",
+      "items": [
+        {"name": "Chicken leg", "quantity": 10, "unit_price": "2.00", "category": "meat"},
+        {"name": "Ground beef", "quantity": 8, "unit_price": "4.50", "category": "meat"},
+        {"name": "Rice 20 lb", "quantity": 4, "unit_price": "3.00", "category": "grocery"}
+      ]
+    }
+  ]
+}
+Use decimal dollar amounts, never cents. Categories are meat, produce, or grocery. Preserve the invoice's original date. Use null for an unknown due date. Do not invent unreadable values: ask me to clarify before producing the final file. Include every item. Total means the full amount including taxes, delivery and other charges. Amount paid means money already paid for that invoice, not the amount due. Do not assume payment. Preserve package sizes in item names. Quantities must correspond to the stated unit price. Explain any case/weight ambiguity before finalizing. Check quantity times unit price against the line total, and item totals against the full invoice. Prepare multiple invoices in one invoices array. I will review the file before importing it.
